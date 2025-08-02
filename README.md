@@ -1,25 +1,25 @@
 # suspicious-web-threat-analysis
 Anomaly detection in web traffic using Isolation Forest.
-# 🚨 Suspicious Web Threat Interaction Detection
+#  Suspicious Web Threat Interaction Detection
 
 This project analyzes web traffic data to detect potentially harmful or suspicious interactions using anomaly detection techniques.
 
 ## 📊 Objective
 To identify patterns that could indicate security threats (e.g., infiltration attempts, bot activity, or abnormal port usage) using Isolation Forest.
 
-## 🔍 Techniques Used
+##  Techniques Used
 - Data cleaning & preprocessing
 - Exploratory Data Analysis (EDA)
 - Feature Engineering
 - Anomaly Detection with Isolation Forest
 - Visualization & Reporting
 
-## 📁 Dataset
+##  Dataset
 - Name:`web_threats.csv` 
 - Contains 282 entries of network traffic logs
 - Features: bytes in/out, IPs, protocols, ports, detection types, timestamps, etc.
 
-## 🧠 Key Steps
+##  Key Steps
 
 1. **Data Cleaning**  
    - Handled missing values  
@@ -42,7 +42,7 @@ To identify patterns that could indicate security threats (e.g., infiltration at
    - High `bytes_in` with low `bytes_out` might indicate infiltration  
    - Non-standard port activity & specific country codes show suspicious patterns
 
-## 📈 Output Example
+##  Output Example
 - 15 out of 282 records flagged as suspicious
 - Visualizations show most active hours, protocol usage, and country-based interactions
 
@@ -51,7 +51,7 @@ To identify patterns that could indicate security threats (e.g., infiltration at
 - Python (Pandas, Matplotlib, Seaborn, Scikit-learn)
 - Jupyter Notebook
 
-## 📂 Files in this Repo
+## Files in this Repo
 - `suspicious_web_threat_analysis.ipynb` – Full project notebook
 - `web_threats.csv` – Dataset used
 - `README.md` – Project overview (this file)
