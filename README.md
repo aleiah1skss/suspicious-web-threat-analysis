@@ -15,23 +15,47 @@ To identify patterns that could indicate security threats (e.g., infiltration at
 - Visualization & Reporting
 
 ## 📁 Dataset
-`web_threats.csv` - includes traffic data like source IPs, ports, protocols, etc.
+- Name:`web_threats.csv` 
+- Contains 282 entries of network traffic logs
+- Features: bytes in/out, IPs, protocols, ports, detection types, timestamps, etc.
 
-## 🛠️ Key Features Created
-- `duration`
-- `avg_packet_size`
-- `hour` of traffic
-- Anomaly labels (`is_anomaly`)
+## 🧠 Key Steps
+
+1. **Data Cleaning**  
+   - Handled missing values  
+   - Converted timestamp fields to datetime format  
+
+2. **Exploratory Data Analysis (EDA)**  
+   - Traffic analysis based on bytes_in / bytes_out  
+   - Protocol distribution and hourly traffic pattern
+
+3. **Feature Engineering**  
+   - Extracted session duration  
+   - Calculated average packet size  
+
+4. **Anomaly Detection (Modeling)**  
+   - Applied Isolation Forest to detect abnormal sessions  
+   - Evaluated detection rate of anomalies
+
+5. **Insights**
+   - 15 anomalies found among 282 entries  
+   - High `bytes_in` with low `bytes_out` might indicate infiltration  
+   - Non-standard port activity & specific country codes show suspicious patterns
 
 ## 📈 Output Example
 - 15 out of 282 records flagged as suspicious
 - Visualizations show most active hours, protocol usage, and country-based interactions
 
-## 💡 Insights
-- High `bytes_in` and low `bytes_out` sessions may signal infiltration attempts
-- Suspicious traffic from certain country codes and non-standard ports
 
 ## ✅ Tools Used
 - Python (Pandas, Matplotlib, Seaborn, Scikit-learn)
 - Jupyter Notebook
+
+## 📂 Files in this Repo
+- `suspicious_web_threat_analysis.ipynb` – Full project notebook
+- `web_threats.csv` – Dataset used
+- `README.md` – Project overview (this file)
+
+## 📬 Contact
+Created as part of a virtual internship by Aliya Nishath
 
